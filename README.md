@@ -10,3 +10,5 @@ Voici la liste des modules requis:
 - random
 - operator
 - time
+
+#(Le code n'est pas fini !)
