@@ -12,44 +12,108 @@ def checkwin(a,b,c,d,e,f,g,h,i,screen):
 
         #Horizontal
         if(a==1 and b==1 and c==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(d==1 and e==1 and f==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(g==1 and h==1 and i==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         #Vertical
         if(a==1 and d==1 and g==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(b==1 and e==1 and h==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(c==1 and f==1 and i==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         #Diagonal
         if(a==1 and e==1 and i==1):
-            print('Player 1 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(c==1 and e==1 and g==1):
-            print('Player 1 won')
+           screen.fill((5,5,5))
+           cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+           cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+           Texte('Player 1 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+           pygame.display.flip()
 
         #Player 2 Gagant
         #Horizontal
         if(a==2 and b==2 and c==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(d==2 and e==2 and f==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(g==2 and h==2 and i==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         #Vertical
         if(a==2 and d==2 and g==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(b==2 and e==2 and h==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(c==2 and f==2 and i==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         #Diagonal
         if(a==2 and e==2 and i==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         if(c==2 and e==2 and g==2):
-            print('Player 2 won')
+            screen.fill((5,5,5))
+            cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
+            cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
+            Texte('Player 2 Won', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
+            pygame.display.flip()
         #Match null
         if(a!=0 and b!=0 and c!=0 and d!=0 and e!=0 and f!=0 and g!=0 and h!=0 and i!=0):
             screen.fill((5,5,5))
@@ -57,4 +121,3 @@ def checkwin(a,b,c,d,e,f,g,h,i,screen):
             cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
             Texte('match nul', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/Win.ttf').affiche(screen)
             pygame.display.flip()
-            
