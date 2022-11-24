@@ -129,7 +129,8 @@ while True:
     while Menu:
         for event in pygame.event.get():
             if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
-                exit()
+               pygame.quit()
+               exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse = pygame.mouse.get_pos()
                 if 50 <= mouse[0] <= 450 and 350 <= mouse[1] <= 450:
@@ -159,6 +160,7 @@ while True:
             if(a == 0 or b == 0 or c == 0 or d == 0 or e == 0 or f == 0 or g == 0 or h == 0 or i == 0):
                 for event in pygame.event.get():
                     if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
+                        pygame.quit()
                         exit()
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         mouse = pygame.mouse.get_pos()
@@ -239,6 +241,7 @@ while True:
             if(a == 0 or b == 0 or c == 0 or d == 0 or e == 0 or f == 0 or g == 0 or h == 0 or i == 0):
                 for event in pygame.event.get():
                     if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
+                        pygame.quit()
                         exit()
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         mouse = pygame.mouse.get_pos()
@@ -317,6 +320,7 @@ while True:
                 Player1,Player2=1,0
                 pygame.display.flip()
             if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
+                pygame.quit()
                 exit()
         cadre = Draw_rect().gen((150, 105, 0),((45,295),(405,105)),screen)
         cadre = Draw_rect().gen((225, 155, 0),((50,300),(395,95)),screen)
