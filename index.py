@@ -1,10 +1,10 @@
-#=== Import des modules 
+#=== Import des modules
 from cProfile import run
 from fileinput import filename
 import pygame
 from pygame.locals import *
 from random import *
-import yaml
+#from yaml import *
 from operator import itemgetter
 from time import *
 from MainConstructor import *
@@ -60,9 +60,9 @@ class TextProgress:
             surf.fill(self.color)
             global finished
             finished = 1
-            global Menu           
+            global Menu
             Menu = 1
-            
+
         surf.blit(self.text, (0,0))
         #surf.blit(self.outline, (-1,-1))
         surf.set_colorkey(self.notcolor)
@@ -71,7 +71,6 @@ class TextProgress:
 entry_info = '/////////////////////////'
 ch = 0
 
-#this code will display our work, if the script is run...
 if __name__ == '__main__':
     import random
     pygame.init()
@@ -83,7 +82,7 @@ if __name__ == '__main__':
     white = 0, 225, 0
     renderer = TextProgress(font, entry_info, white, (40, 40, 40))
     text = renderer.render(0)
-    
+
     screen.blit(text, (115, 330))
     bar1 = font.render(' ____________ ', True, (255,255,255))
     bar2 = font.render('|____________|', True, (255,255,255))
@@ -91,7 +90,7 @@ if __name__ == '__main__':
     screen.blit(author, (130,280))
     screen.blit(bar1, (105,290))
     screen.blit(bar2, (105,330))
-    
+
     pygame.display.flip()
 
     progress = 1
@@ -104,7 +103,7 @@ if __name__ == '__main__':
         for event in pygame.event.get():
             if event.type in (QUIT,KEYDOWN,MOUSEBUTTONDOWN):
                 finished = 1
-        
+
         progress = (progress + random.randint(0,3)) % 120
         text = renderer.render(progress)
         screen.blit(text, (115, 330))
@@ -119,8 +118,6 @@ Playing = 0
 PlayingBis = 1
 WRestart = 0
 
-test =0
-
 a,b,c,d,e,f,g,h,i = 0,0,0,0,0,0,0,0,0
 
 screen = pygame.display.set_mode((500,600))
@@ -132,7 +129,7 @@ while True:
     while Menu:
         for event in pygame.event.get():
             if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
-                exit()        	
+                exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse = pygame.mouse.get_pos()
                 if 50 <= mouse[0] <= 450 and 350 <= mouse[1] <= 450:
@@ -153,7 +150,7 @@ while True:
             Draw_rect().gen((0, 0, 0),((180,170),(5,390)),screen)
             Draw_rect().gen((0, 0, 0),((310,170),(5,390)),screen)
             PlayingBis = 0
-        
+
         if(a != 0 and b != 0 and c != 0 and d != 0 and e != 0 and f != 0 and g != 0 and h != 0 and i != 0):
             WRestart = 1
             Playing = 0
@@ -220,16 +217,18 @@ while True:
                                 Player1 = 0
                                 Player2 = 1
                                 i = 1
-                    
+
                     cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
                     cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
-                    textMenu = Texte('PLAYER 1', 50, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/04B_30__.TTF').affiche(screen)              
+                    textMenu = Texte('PLAYER 1', 50, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/04B_30__.TTF').affiche(screen)
 
                 pygame.display.flip()
 
             pygame.display.flip()
-        
+
         checkwin(a,b,c,d,e,f,g,h,i,screen)
+        if(checkwin(a,b,c,d,e,f,g,h,i,screen) == 1):
+            Player1,Player2,WRestart,Playing = 0,0,1,0
 
         if(a != 0 and b != 0 and c != 0 and d != 0 and e != 0 and f != 0 and g != 0 and h != 0 and i != 0):
             WRestart = 1
@@ -298,18 +297,25 @@ while True:
                                 Player1 = 1
                                 Player2 = 0
                                 i = 2
-                    
+
                     cadre = Draw_rect().gen((0, 0, 0),((50,50),(400,100)),screen)
                     cadre = Draw_rect().gen((0, 25, 0),((55,55),(395,95)),screen)
                     textMenu = Texte('PLAYER 2', 50, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/04B_30__.TTF').affiche(screen)
                     pygame.display.flip()
             pygame.display.flip()
-        
+
 
         checkwin(a,b,c,d,e,f,g,h,i,screen)
+        if(checkwin(a,b,c,d,e,f,g,h,i,screen) == 1):
+            Player1,Player2,WRestart,Playing = 0,0,1,0
 
     while WRestart:
         for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                a,b,c,d,e,f,g,h,i = 0,0,0,0,0,0,0,0,0
+                WRestart,Playing,PlayingBis=0,1,1
+                Player1,Player2=1,0
+                pygame.display.flip()
             if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
                 exit()
         cadre = Draw_rect().gen((150, 105, 0),((45,295),(405,105)),screen)
