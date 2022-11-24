@@ -11,4 +11,5 @@ Voici la liste des modules requis:
 - operator
 - time
 
-*(Le code n'est pas fini !)*
+*(Le code est fini mais des updates peuvent venir)*
+Version: 1.0.6
