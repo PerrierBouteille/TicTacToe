@@ -140,6 +140,8 @@ while True:
         screen.fill((5,5,5))
         cadre = Draw_rect().gen((0, 0, 0),((50,350),(400,100)),screen)
         cadre = Draw_rect().gen((0, 25, 0),((55,355),(395,95)),screen)
+        textMenu = Texte("TicTacToe", 50, (15,150,15), (cadre.centerx,75), 'ressource/04B_30__.TTF').affiche(screen)
+        textMenu = Texte("TicTacToe", 53, (10,200,10), (cadre.centerx,75), 'ressource/04B_30__.TTF').affiche(screen)
         textMenu = Texte('Start', 75, (10,200,10), (cadre.centerx,cadre.top + 45), 'ressource/04B_30__.TTF').affiche(screen)
         pygame.display.flip()
     while Playing:
